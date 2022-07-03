@@ -536,6 +536,76 @@
             </li>
           </ul>
         </div>
+
+        <div class="footer-subscription">
+          <p class="footer-subscription-text">Подпишитесь на рассылку</p>
+
+          <form class="form js-speaker-form" autocomplete="off">
+            <div class="form-field">
+              <label for="name">Имя</label>
+              <input type="text" name="user-name" id="name" placeholder="Сергей Сергеевич" />
+            </div>
+
+            <div class="form-field">
+              <label for="tel">Телефон</label>
+              <input type="tel" name="user-name" id="tel" />
+            </div>
+
+            <div class="form-field">
+              <label for="mail">Почта</label>
+              <input type="email" name="user-name" id="mail" placeholder="E-mail" />
+            </div>
+
+            <div role="group" class="group">
+              <h2 class="group-title">Тема доклада</h2>
+
+              <ul class="topic-options list">
+                <li>
+                  <input type="checkbox" name="topic" value="html" id="html" />
+                  <label for="html">HTML</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="topic" value="css" id="css" />
+                  <label for="css">CSS</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="topic" value="js" id="js" />
+                  <label for="js">JavaScript</label>
+                </li>
+              </ul>
+            </div>
+            <!-- радио-кнопки -->
+            <div role="group">
+              <input type="radio" name="level" value="junior" id="junior" checked />
+              <label for="junior">Junior</label>
+
+              <input type="radio" name="level" value="middle" id="middle" />
+              <label for="middle">Middle</label>
+
+              <input type="radio" name="level" value="senior" id="senior" />
+              <label for="senior">Senior</label>
+            </div>
+            <!--   Временно, убрать все <br /> ! -->
+            <br />
+            <!--   Временно, убрать все <br /> ! -->
+            <label for="pdf">Загрузите копию доклада в pdf</label>
+            <input type="file" name="pdf" id="pdf" />
+            <!--   Временно, убрать все <br /> ! -->
+            <br />
+            <!--   Временно, убрать все <br /> ! -->
+            <label for="comment">Комментарий</label>
+            <textarea name="comment" id="comment" rows="8" placeholder="Введите текст"></textarea>
+            <!--   Временно, убрать все <br /> ! -->
+            <br />
+            <!--   Временно, убрать все <br /> ! -->
+            <input type="checkbox" name="policy" id="policy" />
+            <label for="policy">Соглашаюсь с рассылкой и принимаю</label>
+            <!--   Временно, убрать все <br /> ! -->
+            <br />
+            <!--   Временно, убрать все <br /> ! -->
+            <button type="submit">Подписаться</button>
+          </form>
+        </div>
       </div>
     </footer>
 
@@ -550,6 +620,21 @@
       </div>
     </div>
 
+    <!-- Скрипт модального окна:  -->
     <script src="./js/modal.js"></script>
+
+    <!-- Скрипт для просмотра данных отправки в "console" без перезагрузки страницы: ЗАКОМЕНТИРОВАТЬ!!! -->
+    <script>
+      (() => {
+        document.querySelector('.js-speaker-form').addEventListener('submit', e => {
+          e.preventDefault();
+          new FormData(e.currentTarget).forEach((value, name) =>
+            console.log(`${name}:
+    ${value}`)
+          );
+          e.currentTarget.reset();
+        });
+      })();
+    </script>
   </body>
 </html>

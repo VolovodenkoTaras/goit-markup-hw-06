@@ -28,7 +28,7 @@ body {
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
   font-size: 14px;
-  line-height: calc(16 / 14);
+  line-height: calc(16.41 / 14);
 }
 
 /* ОБЩЕЕ */
@@ -44,6 +44,11 @@ h6,
 ul {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+/* Не растягивать комментарии пользователем*/
+textarea {
+  resize: none;
 }
 
 /*Техника отзывчивых изображений*/
@@ -361,9 +366,17 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: color 250ms var(--cubic);
+}
+
+.button.close-modal:hover,
+.button.close-modal:focus {
+  color: var(--accent-color);
 }
 
 .svg-close-modal {
+  fill: currentColor;
   width: 18px;
   height: 18px;
 }
@@ -684,10 +697,16 @@ img {
 }
 
 .footer-social {
+  margin-right: 93px;
+}
+
+.footer-social,
+.footer-subscription {
   padding-top: 15px;
 }
 
-.footer-social-text {
+.footer-social-text,
+.footer-subscription-text {
   color: var(--primary-white-color);
   font-weight: 700;
   text-transform: uppercase;
@@ -868,3 +887,63 @@ img {
   display: block;
 }
 */
+
+/* тестовая форма , УБРАТЬ - начало*/
+.form {
+  width: 600px;
+  outline: 1px solid tomato;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+.form-field {
+  /* outline: 1px solid greenyellow; */
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-field label {
+  margin-bottom: 5px;
+}
+
+.form-field input {
+  margin: 0;
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: 1px solid green;
+}
+
+.form-field input::placeholder {
+  color: blueviolet;
+}
+
+.group {
+}
+
+.group-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.topic-options {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.topic-options li {
+  display: flex;
+  align-items: center;
+}
+
+.topic-options input[type='checkbox'] {
+}
+
+.topic-options label {
+  font-size: 20px;
+  margin-left: 10px;
+}
+/* тестовая форма , УБРАТЬ - конец */ ;
