@@ -487,11 +487,22 @@ img {
 }
 
 .modal-form-input-agreement {
-  /* Скрытие стандартного чекбокса */
-  appearance: none;
+  /* Скрытие стандартного чекбокса (для современных браузеров)*/
+  /* appearance: none;
   -moz-appearance: none;
-  -webkit-appearance: none;
-  /* Скрытие стандартного чекбокса */
+  -webkit-appearance: none; */
+
+  /* Скрытие стандартного чекбокса (для всех браузеров)*/
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .svg-modal-form-agreement-yes {
@@ -507,6 +518,7 @@ img {
   transition: fill 250ms var(--cubic), border 250ms var(--cubic);
 }
 
+/* При клике на чекбоксе меняет иконку */
 .modal-form-input-agreement:checked + .svg-modal-form-agreement-yes {
   fill: var(--accent-color);
   border: none;
