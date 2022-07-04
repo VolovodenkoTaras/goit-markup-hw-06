@@ -74,7 +74,6 @@ img {
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
@@ -460,9 +459,16 @@ img {
   line-height: calc(16.41 / 14);
   letter-spacing: 0.01em;
   outline: none;
-  color: var(--modal-window-commentary-text-color);
 
   transition: border-color 250ms var(--cubic);
+}
+
+.modal-form-field.commentary {
+  margin-bottom: 20px;
+}
+
+.modal-form-commentary::placeholder {
+  color: var(--modal-window-commentary-text-color);
 }
 
 .modal-form-commentary:focus-within {
@@ -474,14 +480,42 @@ img {
   font-size: 12px;
   line-height: calc(14.06 / 12);
   letter-spacing: 0.01em;
-  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
   margin-bottom: 30px;
+}
+
+.modal-form-input-agreement {
+  /* Скрытие стандартного чекбокса */
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  /* Скрытие стандартного чекбокса */
+
+  margin-right: 7px;
+}
+
+.svg-modal-form-agreement-yes {
+  fill: var(--primary-white-color);
+  width: 16px;
+  height: 15px;
+
+  border-radius: 1px;
+  border: 2px solid var(--title-text-color);
+
+  transition: fill 250ms var(--cubic), border 250ms var(--cubic);
+}
+
+.modal-form-agreement:focus-within .svg-modal-form-agreement-yes {
+  fill: var(--accent-color);
+  border: none;
 }
 
 .modal-form-agreement-text {
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
+  margin-right: 5px;
 }
 
 .modal-form-agreement-terms {
@@ -491,10 +525,6 @@ img {
   color: var(--accent-color);
   text-decoration-color: var(--accent-color);
   text-decoration-line: underline;
-}
-
-.modal-form-send {
-  text-align: center;
 }
 
 .modal-form .button {
@@ -508,6 +538,7 @@ img {
 
   display: inline-block;
   padding: 10px 32px;
+  margin: 0px 124px;
   min-width: 200px;
   text-align: center;
 
@@ -816,7 +847,7 @@ img {
 }
 
 .contacts-footer .location {
-  color: var(--primary-white-color);agreement-text"
+  color: var(--primary-white-color);
   font-style: normal;
   line-height: calc(24 / 14);
 
@@ -1076,104 +1107,3 @@ img {
   display: block;
 }
 */
-
-/* тестовая форма , УБРАТЬ ЛИШНЕЕ - начало*/
-
-.lesson .form {
-  width: 600px;
-  outline: 1px solid tomato;
-}
-
-.form {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 40px;
-}
-
-.form-header {
-  font-size: 20px;
-  line-height: calc(23.44 / 20);
-  color: var(--title-text-color);
-
-  margin-bottom: 12px;
-  text-align: center;
-}
-
-.form-field {
-  /* outline: 1px solid greenyellow; */
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-
-  margin-bottom: 10px;
-}
-
-.form-field label {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: calc(14.06 / 12);
-  letter-spacing: 0.01em;
-  margin-bottom: 4px;
-}
-
-.form-field input {
-  margin: 0;
-  padding: 12px;
-  border-radius: 4px;
-  border: 1px solid var(--modal-window-form-input-border-color);
-}
-
-/* .form-field:hover input,
-.form-field:focus input,
-.form-field:active input {
-  border: 1px solid var(--accent-color);
-} */
-
-.form-field input::placeholder {
-  color: blueviolet;
-}
-
-.group {
-  margin-bottom: 10px;
-}
-
-.group-title {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-.topic-options,
-.level-options {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.topic-options li {
-  display: flex;
-  align-items: center;
-}
-
-.topic-options input[type='checkbox'] {
-}
-
-.topic-options label {
-  font-size: 20px;
-  margin-left: 10px;
-}
-
-.form .date {
-  border-width: 5px;
-  border-radius: 4px;
-  border-color: red;
-  padding: 20px 40px;
-  font-size: 30px;
-  color: darkorange;
-}
-
-.form .comment {
-  padding: 8px;
-}
-
-/* тестовая форма , УБРАТЬ - конец */ ;

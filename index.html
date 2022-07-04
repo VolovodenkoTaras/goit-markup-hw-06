@@ -475,90 +475,6 @@
           </ul>
         </div>
       </section>
-
-      <section class="lesson">
-        <form class="form js-speaker-form" autocomplete="off">
-          <div class="form-field">
-            <label for="name">Имя</label>
-            <input type="text" name="user-name" id="name" placeholder="Сергей Сергеевич" />
-          </div>
-
-          <div class="form-field">
-            <label for="tel">Телефон</label>
-            <input type="tel" name="user-name" id="tel" />
-          </div>
-
-          <div class="form-field">
-            <label for="mail">Почта</label>
-            <input type="email" name="user-name" id="mail" placeholder="E-mail" />
-          </div>
-
-          <div class="group" role="group">
-            <h2 class="group-title">Тема доклада</h2>
-
-            <ul class="topic-options list">
-              <li>
-                <input type="checkbox" name="topic" value="html" id="html" />
-                <label for="html">HTML</label>
-              </li>
-              <li>
-                <input type="checkbox" name="topic" value="css" id="css" />
-                <label for="css">CSS</label>
-              </li>
-              <li>
-                <input type="checkbox" name="topic" value="js" id="js" />
-                <label for="js">JavaScript</label>
-              </li>
-            </ul>
-          </div>
-          <!-- радио-кнопки -->
-          <div class="group" role="group">
-            <h2 class="group-title">Ваш уровень</h2>
-            <ul class="level-options list">
-              <li>
-                <input type="radio" name="level" value="junior" id="junior" checked />
-                <label for="junior">Junior</label>
-              </li>
-              <li>
-                <input type="radio" name="level" value="middle" id="middle" />
-                <label for="middle">Middle</label>
-              </li>
-              <li>
-                <input type="radio" name="level" value="senior" id="senior" />
-                <label for="senior">Senior</label>
-              </li>
-            </ul>
-          </div>
-
-          <div class="form-field">
-            <label for="date">Дата доклада</label>
-            <input class="date" type="datetime-local" name="date" id="date" />
-          </div>
-
-          <div class="form-field">
-            <label for="pdf">Загрузите копию доклада в pdf</label>
-            <input type="file" name="pdf" id="pdf" />
-          </div>
-
-          <div class="form-field">
-            <label for="comment">Комментарий</label>
-            <textarea
-              class="comment"
-              name="comment"
-              id="comment"
-              rows="8"
-              placeholder="Введите текст"
-            ></textarea>
-          </div>
-
-          <div class="form-field">
-            <input type="checkbox" name="policyy" id="policyy" />
-            <label for="policyy">Соглашаюсь с рассылкой и принимаю</label>
-          </div>
-
-          <button type="submit">Подписаться</button>
-        </form>
-      </section>
     </main>
 
     <!--Подвал-->
@@ -659,65 +575,54 @@
         <form class="modal-form js-speaker-form" autocomplete="off">
           <h2 class="modal-form-header">Оставьте свои данные, мы вам перезвоним</h2>
 
-          <label class="modal-form-field" for="person">
+          <label class="modal-form-field">
             <span class="modal-form-label">Имя</span>
-            <input
-              class="modal-form-input"
-              type="text"
-              name="user-name"
-              id="person"
-              placeholder=" "
-            />
+            <input class="modal-form-input" type="text" name="user-name" />
             <svg class="svg-modal-form">
               <use href="./images/icons.svg#modal-person"></use>
             </svg>
           </label>
 
-          <label class="modal-form-field" for="phone">
+          <label class="modal-form-field">
             <span class="modal-form-label">Телефон</span>
-            <input class="modal-form-input" type="tel" name="phone" id="phone" placeholder=" " />
+            <input class="modal-form-input" type="tel" name="phone" />
             <svg class="svg-modal-form">
               <use href="./images/icons.svg#modal-phone"></use>
             </svg>
           </label>
 
-          <label class="modal-form-field" for="e-mail">
+          <label class="modal-form-field">
             <span class="modal-form-label">Почта</span>
-            <input
-              class="modal-form-input"
-              type="email"
-              name="e-mail"
-              id="e-mail"
-              placeholder=" "
-            />
+            <input class="modal-form-input" type="email" name="e-mail" />
             <svg class="svg-modal-form">
               <use href="./images/icons.svg#modal-email"></use>
             </svg>
           </label>
 
-          <label class="modal-form-field" for="commentary">
+          <label class="modal-form-field commentary">
             <span class="modal-form-label">Комментарий</span>
             <textarea
               class="modal-form-commentary"
               name="commentary"
-              id="commentary"
               placeholder="Введите текст"
             ></textarea>
           </label>
 
-          <div class="modal-form-agreement">
-            <label for="policy">
-              <input type="checkbox" name="policy" id="policy" />
-              <span class="modal-form-agreement-text">Соглашаюсь с рассылкой и принимаю</span>
-              <a class="link" href="">
-                <span class="modal-form-agreement-terms">Условия договора</span>
-              </a>
-            </label>
-          </div>
+          <label class="modal-form-agreement">
+            <span>
+              <svg class="svg-modal-form-agreement-yes">
+                <use href="./images/icons.svg#agreement-yes"></use>
+              </svg>
+            </span>
+            <input class="modal-form-input-agreement" type="checkbox" name="policy" />
 
-          <div class="modal-form-send">
-            <button class="button" type="submit">Отправить</button>
-          </div>
+            <span class="modal-form-agreement-text">Соглашаюсь с рассылкой и принимаю</span>
+            <a class="link" href="">
+              <span class="modal-form-agreement-terms">Условия договора</span>
+            </a>
+          </label>
+
+          <button class="button" type="submit">Отправить</button>
         </form>
       </div>
     </div>
