@@ -542,7 +542,7 @@
 
           <form class="form-subscription js-speaker-form" autocomplete="off">
             <div class="form-subscription-field">
-              <!-- <label for="email">Почта</label> -->
+              <label class="hidden" for="email"></label>
               <input
                 class="subscription-input"
                 type="email"
@@ -631,7 +631,7 @@
     <script src="./js/modal.js"></script>
 
     <!-- Скрипт для просмотра данных отправки в "console" без перезагрузки страницы: ЗАКОМЕНТИРОВАТЬ!!! -->
-    <script>
+    <!-- <script>
       (() => {
         document.querySelector('.js-speaker-form').addEventListener('submit', e => {
           e.preventDefault();
@@ -642,6 +642,6 @@
           e.currentTarget.reset();
         });
       })();
-    </script>
+    </script> -->
   </body>
 </html>

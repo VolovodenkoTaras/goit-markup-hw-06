@@ -463,16 +463,16 @@ img {
   transition: border-color 250ms var(--cubic);
 }
 
+.modal-form-commentary:focus-within {
+  border-color: var(--accent-color);
+}
+
 .modal-form-field.commentary {
   margin-bottom: 20px;
 }
 
 .modal-form-commentary::placeholder {
   color: var(--modal-window-commentary-text-color);
-}
-
-.modal-form-commentary:focus-within {
-  border-color: var(--accent-color);
 }
 
 .modal-form-agreement {
