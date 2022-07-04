@@ -480,7 +480,8 @@ img {
   font-size: 12px;
   line-height: calc(14.06 / 12);
   letter-spacing: 0.01em;
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
   align-items: center;
   margin-bottom: 30px;
 }
@@ -491,8 +492,6 @@ img {
   -moz-appearance: none;
   -webkit-appearance: none;
   /* Скрытие стандартного чекбокса */
-
-  margin-right: 7px;
 }
 
 .svg-modal-form-agreement-yes {
@@ -500,13 +499,15 @@ img {
   width: 16px;
   height: 15px;
 
+  margin-right: 7px;
+
   border-radius: 1px;
   border: 2px solid var(--title-text-color);
 
   transition: fill 250ms var(--cubic), border 250ms var(--cubic);
 }
 
-.modal-form-agreement:focus-within .svg-modal-form-agreement-yes {
+.modal-form-input-agreement:checked + .svg-modal-form-agreement-yes {
   fill: var(--accent-color);
   border: none;
 }
