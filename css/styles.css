@@ -488,9 +488,11 @@ img {
 
 .modal-form-input-agreement {
   /* Скрытие стандартного чекбокса (для современных браузеров)*/
-  /* appearance: none;
+  /*  
   -moz-appearance: none;
-  -webkit-appearance: none; */
+  -webkit-appearance: none;
+  appearance: none;
+  */
 
   /* Скрытие стандартного чекбокса (для всех браузеров)*/
   position: absolute;
